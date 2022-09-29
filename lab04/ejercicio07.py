@@ -1,22 +1,23 @@
-def computegrade(grade):
-        if(grade >= 0.9 and grade <= 1.0):
-                grade = "A"
-        elif (grade ≥ 0.8 and grade < 0.9):
-                grade = "B"
-        elif (grade ≥ 0.7 and grade < 0.8):
-                grade: "C"
-        elif (grade ≥ 0.6 and grade < 0.7):
-                grade = "D"
-        elif (grade ≥ 0 and grade < 0.6):
-                grade= "F"
+def imprimirCalificación(Calificación):
+        if(Puntuación >= 0.9 and Puntuación <= 1.0):
+                Calificación = "Sobresaliente"
+        elif (Puntuación >= 0.8 and Puntuación < 0.9):
+                Calificación = "Notable"
+        elif (Puntuación >= 0.7 and Puntuación < 0.8):
+                Calificación=  "Bien"
+        elif (Puntuación >= 0.6 and Puntuación < 0.7):
+                Calificación = "Suficiente"
+        elif (Puntuación >= 0 and Puntuación < 0.6):
+                Calificación= "Insuficiente"
         else:
-                grade = "Calificación no valida"
-        return grade
-
+                Calificación = "No definido"
+        return Calificación
+        
 try:
-        score = float(input("Ingrese la calificación (0.01 - 1.00: "))
-        grade = computegrade(score)
-        print("El grado de su calificación es:", grade)
+        Puntuación = float(input("Ingrese la calificación (0.01 - 1.00): "))
+        Calificación = imprimirCalificación(Puntuación)
+        print("La calificación de su puntuación es:", Calificación)
 except:
-        print("Error, calificación solo acepta números")
+        print("Error, calificación solo acepta números") 
+        
 
